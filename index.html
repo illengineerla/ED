@@ -16,6 +16,7 @@
    		}
 		p{
 			white-space: pre-wrap;
+			text-shadow: 1px 1px 2px white, 0 0 1em orange;
 		}
 		h1{
 			background-color: #ffb938;
@@ -26,9 +27,102 @@
 		h2{
 			color: #ffc278; 
 		}
+		li{
+			text-shadow: 1px 1px 2px white, 0 0 1em orange;
+		}
+		td{
+			text-shadow: 1px 1px 2px white, 0 0 1em orange;
+		}
+		.column {
+	    -webkit-column-width: 200px;
+	    -moz-column-width: 200px;
+	    column-width: 200px;
+	    -webkit-column-count: 3;
+	    -moz-column-count: 3;
+	    column-count: 3;
+	    -webkit-column-gap: 30px;
+	    -moz-column-gap: 30px;
+	    column-gap: 30px;
+	    -webkit-column-rule: 1px solid #ccc;
+	    -moz-column-rule: 1px solid #ccc;
+	    column-rule: 1px solid #ccc;
+	    }
+	    .box1 { 
+    background: #f0f0f0; /* Цвет фона */
+    width: 300px; /* Ширина блока */
+    padding: 10px; /* Поля */
+    border: 2px solid #000; /* Параметры рамки */
+   }
+   		textarea{
+   			resize: both;
+   		}
+   		
+img{
+	-ms-transform: translate(50px, 100px); /* IE 9 */
+    -webkit-transform: translate(10px, 50px); /* Safari */
+    transform: translate(10px, 50px);
+}
+.img{
+	-webkit-transform: rotateY(130deg); /* Safari */
+    transform: rotateY(130deg);
+}
+.box {
+  background: #ffb938;
+  border-radius: 6px;
+  cursor: pointer;
+  height: 95px;
+  line-height: 95px;
+  text-align: center;
+  transition-property: background, border-radius;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+}
+.box:hover {
+  background: #ff7b29;
+  border-radius: 50%;
+}
+.circle {
+  background: green;
+  border-radius: 100%;
+  width: 700px;
+  height: 700px;
+  -webkit-animation: pulsing 2s infinite;
+  animation: pulsing 2s infinite;
+}
+
+@-webkit-keyframes pulsing {
+  0% {
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5)
+  }
+  50% {
+    -webkit-transform: scale(1.0, 1.0);
+    transform: scale(1.0, 1.0);
+  }
+  100% {
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+  }
+}
+
+@keyframes pulsing {
+  0% {
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5)
+  }
+  50% {
+    -webkit-transform: scale(1.0, 1.0);
+    transform: scale(1.0, 1.0);
+  }
+  100% {
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+  }
+}
+
 	</style>
 </head>
-<body style="margin: 0;">
+<body style="margin: 0; word-wrap: break-word;">
 	<head style="display: flex;">
 		<a href="#1" style="margin-left: 25px;">Знакомство</a>
 		<select style="margin-left: 25px;" onchange="location = this.value;">
@@ -41,8 +135,8 @@
 		<a href="#3" style="margin-left: 25px;">Фотографии Сони</a>
 		<a href="#4" style="margin-left: 25px;">Соня хочет познакомиться</a>
 	</head>
-	<h1 id="1">Здравствуйте, меня зовут Соня.</h1><hr size="5px" color="#ff8c00">
-	<p id="2.1" style="margin-left: 5px;">		Мне 4 года. Работаю домашней собакой в семье Калининых, платят любовью. Честно говоря, как утроилась на эту работу, не помню. Жаль, что у меня память не как у людей. Большую часть времени лежу дома, иногда меняя место, где я лежу. <span style="text-decoration: underline;">Это так утомляет.</span>  Все хозяева постоянно заняты обычно чем-то, и поэтому когда появляется возможность погулять, пользуюсь ею по максимуму. Особенно люблю ходить в парк. <span style="font-weight: bold;">Какое название у него не знаю, но там белки, надеюсь хотя бы раз их поймаю.</span> Иногда хозяева пытаются уехать без меня, поэтому я постоянно ихкараулю и сижу у двери и никуда не пускаю, когда вижу, что они куда-то собираются. Особенно сильно радует, когда хозяева возвращаются домой. Ну, а когда катаюсь с ними, вылазею в окошко, ну или просто лежу на кресле. <div style="text-transform: uppercase;">Перемещаться по городу и одновременно сидеть довольно удобно.</div> Очень люблю выезжать вместе с хозяевами на природу и заниматься с ними спортом. Так например мне нравится сидеть на даче. А зимой меня берут с собой на озеро, и я бегаю рядом с хозяевами, пока они катаются на лыжах. <span style="font-weight: bold;">Почему-то иногда с другими собаками мне не дают общаться, особенно с другими девочками. Обычно я при разговоре с другими грызу их. Ну да ладно, это даже лучше, они ни что, передо мной!</span> А с мальчиками я тоже общаюсь, но с некоторыми мне скучно. Еще я очень боюсь громких звуков. На новый год, когда постоянно что-то хлопает за окном, было так страшно, хорошо, что мои хозяева были рядом.</p>
+	<h1 id="1" class="box">Здравствуйте, меня зовут Соня.</h1><hr size="5px" color="#ff8c00">
+	<div class="column"><p id="2.1" style="margin-left: 5px;">		Мне 4 года. Работаю домашней собакой в семье Калининых, платят любовью. Честно говоря, как утроилась на эту работу, не помню. Жаль, что у меня память не как у людей. Большую часть времени лежу дома, иногда меняя место, где я лежу. <span style="text-decoration: underline;">Это так утомляет.</span>  Все хозяева постоянно заняты обычно чем-то, и поэтому когда появляется возможность погулять, пользуюсь ею по максимуму. Особенно люблю ходить в парк. <span style="font-weight: bold;">Какое название у него не знаю, но там белки, надеюсь хотя бы раз их поймаю.</span> Иногда хозяева пытаются уехать без меня, поэтому я постоянно ихкараулю и сижу у двери и никуда не пускаю, когда вижу, что они куда-то собираются. Особенно сильно радует, когда хозяева возвращаются домой. Ну, а когда катаюсь с ними, вылазею в окошко, ну или просто лежу на кресле. </p><div style="text-transform: uppercase; color: rgb(128,0,0);" class="box">Перемещаться по городу и одновременно сидеть довольно удобно.</div><p> Очень люблю выезжать вместе с хозяевами на природу и заниматься с ними спортом. Так например мне нравится сидеть на даче. А зимой меня берут с собой на озеро, и я бегаю рядом с хозяевами, пока они катаются на лыжах. <span style="font-weight: bold;">Почему-то иногда с другими собаками мне не дают общаться, особенно с другими девочками. Обычно я при разговоре с другими грызу их. Ну да ладно, это даже лучше, они ни что, передо мной!</span> А с мальчиками я тоже общаюсь, но с некоторыми мне скучно. Еще я очень боюсь громких звуков. На новый год, когда постоянно что-то хлопает за окном, было так страшно, хорошо, что мои хозяева были рядом.</p></div>
 	<p id="2.2">Список того, что я люблю поесть</p>
 	<ul style="margin-left: 5px;">
 		<li>Мороженое</li>
@@ -53,12 +147,12 @@
 		<li>Коктейль</li>
 		<li>Мясо, ну как же без него)</li>
 	</ul>
-	<table id="2.3" style="margin-left: 5px;">
-		<tr>
+	<table id="2.3" style="margin-left: 5px;" class="div">
+		<tr class="img">
 			<td>Хозяева</td>
 			<td>Что делает</td>
 		</tr>
-		<tr>
+		<tr class="img">
 			<td>Андрей Калинин</td>
 			<td>Главный хозяин. Покупает мне вещи, гуляет со мной, катает меня, развлекает, кормит</td>
 		</tr>
@@ -75,15 +169,15 @@
 			<td>Кормит, ухаживает за мной, гуляет со мной, научил меня, как просить еду у других хозяев, не дает соскучиться и играет со мной</td>
 		</tr>
 	</table>
-	<div id="2.4" class="block" style="margin-top: 20px; margin-bottom: 20px; white-space: pre-wrap; margin-left: 5px;">		Впринцепе, мне больше нечего добавить. Я очень люблю своих хозяев. Они заботятся обо мне, ухаживают за мной, кормят, моют, стараются играться со мной. Но в последнее время я какая-то унылаю, ничего не хочется, особенно когда просто выхожу просто погулять. Хочется просто постоять и насладиться ветром и погодой. Однако, меня все устраивает. Желаю всем хорошего настроения, и по больше любуйтесь мной! Ссылка на одного из моих хозяев, <a href="https://vk.com/il.kalinin">Калинина Илью</a></div><hr size="5px" color="#ff8c00">
+	<div id="2.4" class="block box1 myDiv" style="margin-top: 20px; margin-bottom: 20px; white-space: pre-wrap; margin-left: 5px; perspective: 400px;"><p>		Впринцепе, мне больше нечего добавить. Я очень люблю своих хозяев. Они заботятся обо мне, ухаживают за мной, кормят, моют, стараются играться со мной. Но в последнее время я какая-то унылаю, ничего не хочется, особенно когда просто выхожу просто погулять. Хочется просто постоять и насладиться ветром и погодой. Однако, меня все устраивает. Желаю всем хорошего настроения, и по больше любуйтесь мной! Ссылка на одного из моих хозяев,<a href="https://vk.com/il.kalinin">Калинина Илью</a></p></div><hr size="5px" color="#ff8c00">
 	<div style="display: flex;">
 		<div id="3">
 			<h2 style="position: absolute;">Это я :3</h2>
-			<img src="img.jpg">
-			<img src="img2.jpg">
+			<img class="circle" src="img.jpg">
+			<img class="circle" src="img2.jpg">
 		</div>
 		<div id="4" style="margin-left: 20px;">
-			<form>
+			<form style="background: radial-gradient(white, #FFA9A1); padding: 10px;">
 				<label>Скажите, как вас зовут?</label><br>
 				<label>Имя</label>
 				<input style="margin-left: 33px;" type="" name=""><br><br>
